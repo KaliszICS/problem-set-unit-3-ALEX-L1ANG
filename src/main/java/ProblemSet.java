@@ -14,6 +14,7 @@ public class ProblemSet {
 		System.out.print("Input two emails: ");
 		String emails = input.nextLine();
 		emails = emails.toLowerCase(); // Removing case sensitivity 
+		emails = emails.trim(); // Remove excess spacing
 
 		if (emails.contains(",")) {
 			// Dividing into 2 seperate Emails for seperate validation
