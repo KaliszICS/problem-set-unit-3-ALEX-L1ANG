@@ -62,8 +62,7 @@ public class ProblemSet {
 			return "No dot in domain"; // Reason
 		} 
 		String domainExtension = domain.substring(domain.lastIndexOf(".") + 1); // Defining domain extension (what's after .)
-		int domainExtensionLength = domainExtension.length();
-		if (domainExtensionLength < 2 || domainExtensionLength > 6) { // Extension (after final dot) has to be 2-6 characters
+		if (domainExtension.length() < 2 || domainExtension.length() > 6) { // Extension (after final dot) has to be 2-6 characters
 			return "Invalid domain extension length";
 		}
 
