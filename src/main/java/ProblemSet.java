@@ -38,7 +38,7 @@ public class ProblemSet {
 			return "Missing @"; // Reason
 		}
 		if (email.indexOf("@") != email.lastIndexOf("@")) { // If there's more than one @
-			return "Multiple @"; // Reason
+			return "Multiple @s"; // Reason
 		}
 		if (email.startsWith(".") || email.endsWith(".")) { // Email can not start or end with .
 			return "Starts or ends with dot"; // Reason
@@ -85,13 +85,13 @@ public class ProblemSet {
 		if (domain.contains("_")) { // _ can only be in Local
 			return "Domain contains underscore";
 		}
-		return "Valid"; // if all statements above are false, start valid Email format
+		return "pass"; // if all statements above are false, start valid Email format
 	}
 
 	// Printing result, i.e. Valid/Invalid & Reason
 	public static String result(String reasoning, String email) {
 		// If result is valid
-		if (reasoning.equals("Valid")) {
+		if (reasoning.equals("pass")) {
 			String local = email.substring(0, email.indexOf("@"));
 			String domain = email.substring(email.indexOf("@") + 1);
 			System.out.print(email + ": Valid ");
@@ -106,4 +106,3 @@ public class ProblemSet {
 		}
 	}
 }
-
