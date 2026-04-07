@@ -8,13 +8,12 @@ Date Last Modified: April 7, 2026
 import java.util.Scanner;
 public class ProblemSet {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		// Email(s) intake system
 		Scanner input = new Scanner(System.in);
 		System.out.print("Input two emails: ");
 		String emails = input.nextLine();
-		emails = emails.toLowerCase(); // Removing case sensitivity 
-		emails = emails.trim(); // Remove excess spacing
+		emails = emails.toLowerCase(); // Removing case sensitivity
 
 		if (emails.contains(",")) {
 			// Dividing into 2 seperate Emails for seperate validation
